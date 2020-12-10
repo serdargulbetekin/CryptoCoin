@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "163443975404",
+    "project_id": "cryptocoin-cabe5",
+    "storage_bucket": "cryptocoin-cabe5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163443975404:android:144f5df4b6f514251431c9",
+        "android_client_info": {
+          "package_name": "com.example.cryptocoinloodos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163443975404-vn4pkmm8m9m5n25t0u1bmmj2ps5hm6pu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv6hVyfsQGNRodLRjnQXuYX3gAELtziXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163443975404-vn4pkmm8m9m5n25t0u1bmmj2ps5hm6pu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
