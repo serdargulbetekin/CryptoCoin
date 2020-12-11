@@ -1,14 +1,11 @@
 package com.example.cryptocoinloodos.modules.auth
 
-import android.content.Context
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import javax.inject.Inject
 
-class FirebaseAuthRepo @Inject constructor(private val context: Context) {
+class FirebaseAuthRepo {
 
     private val firebaseAuth by lazy {
         FirebaseAuth.getInstance()
@@ -27,11 +24,8 @@ class FirebaseAuthRepo @Inject constructor(private val context: Context) {
                 if (it.isSuccessful) {
                     userMutableLiveData.postValue(firebaseAuth.currentUser)
                 } else {
-                    Toast.makeText(
-                        context,
-                        "Error in registration with: " + it.exception?.message,
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    userMutableLiveData.postValue(null)
+
                 }
             }
     }
@@ -42,11 +36,7 @@ class FirebaseAuthRepo @Inject constructor(private val context: Context) {
                 if (it.isSuccessful) {
                     userMutableLiveData.postValue(firebaseAuth.currentUser)
                 } else {
-                    Toast.makeText(
-                        context,
-                        "Error in login with: " + it.exception?.message,
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    userMutableLiveData.postValue(null)
                 }
             }
     }

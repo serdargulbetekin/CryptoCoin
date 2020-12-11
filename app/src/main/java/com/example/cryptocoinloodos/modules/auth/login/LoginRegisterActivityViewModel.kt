@@ -12,7 +12,7 @@ import javax.inject.Inject
 class LoginRegisterActivityViewModel :
     ViewModel() {
 
-    private val firebaseAuthRepo by lazy { FirebaseAuthRepo(AppConfig.appComponent.getContext()) }
+    private val firebaseAuthRepo by lazy { FirebaseAuthRepo() }
 
     val firebaseUser: LiveData<FirebaseUser> by lazy { firebaseAuthRepo.userLiveData }
 

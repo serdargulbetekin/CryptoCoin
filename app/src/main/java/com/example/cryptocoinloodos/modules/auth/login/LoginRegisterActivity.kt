@@ -2,6 +2,7 @@ package com.example.cryptocoinloodos.modules.auth.login
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -27,6 +28,8 @@ class LoginRegisterActivity : AppCompatActivity() {
         viewModelRegister.firebaseUser.observe(this, Observer {
             if (it != null) {
                 startActivity(Intent(this, CryptoActivity::class.java))
+            } else {
+                Toast.makeText(this, "Something went wrong!!!", Toast.LENGTH_SHORT).show()
             }
         })
 
